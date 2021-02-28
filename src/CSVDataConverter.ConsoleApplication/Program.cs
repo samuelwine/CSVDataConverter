@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using System.Dynamic;
 using System.IO;
 using System.Linq;
+using System.Runtime.Serialization;
+using System.Text;
 using System.Text.Json;
 using System.Xml.Linq;
 
@@ -60,12 +62,29 @@ namespace CSVDataConverter.ConsoleApplication
 
 
             //XML serialization
+            XElement finalXmlString = new XElement("Root");
+            XElement xmlString;
+            
             foreach (var expando in list)
+            {
                 foreach (var item in expando as IDictionary<string, object>)
                 {
-                    var xmlString = new XElement(item.Key, item.Value);
-                    Console.WriteLine(xmlString);
+                    if (item.Value.GetType() == typeof(Dictionary<string, object>))
+                    {
+                        xmlString = new XElement(item.Key);
+                        foreach (var keyee in item.Value as Dictionary<string, object>)
+                        {
+                            xmlString.Add(new XElement(keyee.Key, keyee.Value));
+                        }
+                    }
+                    else
+                    {
+                        xmlString = new XElement(item.Key, item.Value);
+                    }
+                    finalXmlString.Add(xmlString);
                 }
+            }
+            Console.WriteLine(finalXmlString);
         }
     }
 }
