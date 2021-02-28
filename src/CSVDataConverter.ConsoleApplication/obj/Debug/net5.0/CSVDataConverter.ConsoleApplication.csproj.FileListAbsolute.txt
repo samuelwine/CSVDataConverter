@@ -1,0 +1,16 @@
+C:\Users\ADMIN\source\repos\CSVDataConverter1\src\CSVDataConverter.ConsoleApplication\bin\Debug\net5.0\CSVDataConverter.ConsoleApplication.exe
+C:\Users\ADMIN\source\repos\CSVDataConverter1\src\CSVDataConverter.ConsoleApplication\bin\Debug\net5.0\CSVDataConverter.ConsoleApplication.deps.json
+C:\Users\ADMIN\source\repos\CSVDataConverter1\src\CSVDataConverter.ConsoleApplication\bin\Debug\net5.0\CSVDataConverter.ConsoleApplication.runtimeconfig.json
+C:\Users\ADMIN\source\repos\CSVDataConverter1\src\CSVDataConverter.ConsoleApplication\bin\Debug\net5.0\CSVDataConverter.ConsoleApplication.runtimeconfig.dev.json
+C:\Users\ADMIN\source\repos\CSVDataConverter1\src\CSVDataConverter.ConsoleApplication\bin\Debug\net5.0\CSVDataConverter.ConsoleApplication.dll
+C:\Users\ADMIN\source\repos\CSVDataConverter1\src\CSVDataConverter.ConsoleApplication\bin\Debug\net5.0\ref\CSVDataConverter.ConsoleApplication.dll
+C:\Users\ADMIN\source\repos\CSVDataConverter1\src\CSVDataConverter.ConsoleApplication\bin\Debug\net5.0\CSVDataConverter.ConsoleApplication.pdb
+C:\Users\ADMIN\source\repos\CSVDataConverter1\src\CSVDataConverter.ConsoleApplication\obj\Debug\net5.0\CSVDataConverter.ConsoleApplication.csprojAssemblyReference.cache
+C:\Users\ADMIN\source\repos\CSVDataConverter1\src\CSVDataConverter.ConsoleApplication\obj\Debug\net5.0\CSVDataConverter.ConsoleApplication.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ADMIN\source\repos\CSVDataConverter1\src\CSVDataConverter.ConsoleApplication\obj\Debug\net5.0\CSVDataConverter.ConsoleApplication.AssemblyInfoInputs.cache
+C:\Users\ADMIN\source\repos\CSVDataConverter1\src\CSVDataConverter.ConsoleApplication\obj\Debug\net5.0\CSVDataConverter.ConsoleApplication.AssemblyInfo.cs
+C:\Users\ADMIN\source\repos\CSVDataConverter1\src\CSVDataConverter.ConsoleApplication\obj\Debug\net5.0\CSVDataConverter.ConsoleApplication.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\source\repos\CSVDataConverter1\src\CSVDataConverter.ConsoleApplication\obj\Debug\net5.0\CSVDataConverter.ConsoleApplication.dll
+C:\Users\ADMIN\source\repos\CSVDataConverter1\src\CSVDataConverter.ConsoleApplication\obj\Debug\net5.0\ref\CSVDataConverter.ConsoleApplication.dll
+C:\Users\ADMIN\source\repos\CSVDataConverter1\src\CSVDataConverter.ConsoleApplication\obj\Debug\net5.0\CSVDataConverter.ConsoleApplication.pdb
+C:\Users\ADMIN\source\repos\CSVDataConverter1\src\CSVDataConverter.ConsoleApplication\obj\Debug\net5.0\CSVDataConverter.ConsoleApplication.genruntimeconfig.cache
