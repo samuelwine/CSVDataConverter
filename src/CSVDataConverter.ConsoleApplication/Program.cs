@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Extensions.DependencyInjection;
+using System;
 using System.Collections.Generic;
 using System.Dynamic;
 using System.IO;
@@ -11,7 +12,10 @@ namespace CSVDataConverter.ConsoleApplication
     class Program
     {
         static void Main(string[] args)
-        {   
+        {
+            var serviceProvider = new ServiceCollection()
+                .BuildServiceProvider();
+
             Console.WriteLine("Please enter file path:");
             var filepath = Console.ReadLine();
             string[] properties = File.ReadAllLines(filepath).Take(1).Single().Split(",");
