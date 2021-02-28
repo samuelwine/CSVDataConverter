@@ -1,0 +1,15 @@
+C:\Users\ADMIN\source\repos\CSVDataConverter1\src\CSVDataConverter.Infrastructure\bin\Debug\net5.0\CSVDataConverter.Infrastructure.deps.json
+C:\Users\ADMIN\source\repos\CSVDataConverter1\src\CSVDataConverter.Infrastructure\bin\Debug\net5.0\CSVDataConverter.Infrastructure.dll
+C:\Users\ADMIN\source\repos\CSVDataConverter1\src\CSVDataConverter.Infrastructure\bin\Debug\net5.0\ref\CSVDataConverter.Infrastructure.dll
+C:\Users\ADMIN\source\repos\CSVDataConverter1\src\CSVDataConverter.Infrastructure\bin\Debug\net5.0\CSVDataConverter.Infrastructure.pdb
+C:\Users\ADMIN\source\repos\CSVDataConverter1\src\CSVDataConverter.Infrastructure\bin\Debug\net5.0\CSVDataConverter.Core.dll
+C:\Users\ADMIN\source\repos\CSVDataConverter1\src\CSVDataConverter.Infrastructure\bin\Debug\net5.0\CSVDataConverter.Core.pdb
+C:\Users\ADMIN\source\repos\CSVDataConverter1\src\CSVDataConverter.Infrastructure\obj\Debug\net5.0\CSVDataConverter.Infrastructure.csprojAssemblyReference.cache
+C:\Users\ADMIN\source\repos\CSVDataConverter1\src\CSVDataConverter.Infrastructure\obj\Debug\net5.0\CSVDataConverter.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ADMIN\source\repos\CSVDataConverter1\src\CSVDataConverter.Infrastructure\obj\Debug\net5.0\CSVDataConverter.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\ADMIN\source\repos\CSVDataConverter1\src\CSVDataConverter.Infrastructure\obj\Debug\net5.0\CSVDataConverter.Infrastructure.AssemblyInfo.cs
+C:\Users\ADMIN\source\repos\CSVDataConverter1\src\CSVDataConverter.Infrastructure\obj\Debug\net5.0\CSVDataConverter.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\source\repos\CSVDataConverter1\src\CSVDataConverter.Infrastructure\obj\Debug\net5.0\CSVDataConverter.Infrastructure.csproj.CopyComplete
+C:\Users\ADMIN\source\repos\CSVDataConverter1\src\CSVDataConverter.Infrastructure\obj\Debug\net5.0\CSVDataConverter.Infrastructure.dll
+C:\Users\ADMIN\source\repos\CSVDataConverter1\src\CSVDataConverter.Infrastructure\obj\Debug\net5.0\ref\CSVDataConverter.Infrastructure.dll
+C:\Users\ADMIN\source\repos\CSVDataConverter1\src\CSVDataConverter.Infrastructure\obj\Debug\net5.0\CSVDataConverter.Infrastructure.pdb

@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "CSVDataConverter.Infrastructure/1.0.0": {
+        "dependencies": {
+          "CSVDataConverter.Core": "1.0.0"
+        },
+        "runtime": {
+          "CSVDataConverter.Infrastructure.dll": {}
+        }
+      },
+      "CSVDataConverter.Core/1.0.0": {
+        "runtime": {
+          "CSVDataConverter.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CSVDataConverter.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CSVDataConverter.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

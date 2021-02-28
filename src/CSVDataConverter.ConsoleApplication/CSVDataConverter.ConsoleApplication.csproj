@@ -9,4 +9,9 @@
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CSVDataConverter.Core\CSVDataConverter.Core.csproj" />
+    <ProjectReference Include="..\CSVDataConverter.Infrastructure\CSVDataConverter.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

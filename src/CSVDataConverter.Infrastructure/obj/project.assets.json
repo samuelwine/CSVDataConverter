@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {}
+    "net5.0": {
+      "CSVDataConverter.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/CSVDataConverter.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CSVDataConverter.Core.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "CSVDataConverter.Core/1.0.0": {
+      "type": "project",
+      "path": "../CSVDataConverter.Core/CSVDataConverter.Core.csproj",
+      "msbuildProject": "../CSVDataConverter.Core/CSVDataConverter.Core.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net5.0": []
+    "net5.0": [
+      "CSVDataConverter.Core >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\ADMIN\\.nuget\\packages\\": {},
@@ -38,7 +57,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\ADMIN\\source\\repos\\CSVDataConverter1\\src\\CSVDataConverter.Core\\CSVDataConverter.Core.csproj": {
+              "projectPath": "C:\\Users\\ADMIN\\source\\repos\\CSVDataConverter1\\src\\CSVDataConverter.Core\\CSVDataConverter.Core.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

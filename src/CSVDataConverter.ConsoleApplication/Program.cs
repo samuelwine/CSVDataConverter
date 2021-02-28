@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using CSVDataConverter.Core.Interfaces;
+using CSVDataConverter.Infrastructure.Services;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Dynamic;
@@ -14,12 +16,13 @@ namespace CSVDataConverter.ConsoleApplication
         static void Main(string[] args)
         {
             var serviceProvider = new ServiceCollection()
+                .AddSingleton<ICSVDataSourceService, FileCSVDataSourceService>()
                 .BuildServiceProvider();
 
-            Console.WriteLine("Please enter file path:");
-            var filepath = Console.ReadLine();
-            string[] properties = File.ReadAllLines(filepath).Take(1).Single().Split(",");
-            var dataLines = File.ReadAllLines(filepath).Skip(1);
+            var csvData = serviceProvider.GetService<ICSVDataSourceService>().GetCSVDataAsStringArray();
+
+            string[] properties = csvData.Take(1).Single().Split(",");
+            var dataLines = csvData.Skip(1);
             var list = new List<ExpandoObject>();
             foreach (var dataline in dataLines)
             {

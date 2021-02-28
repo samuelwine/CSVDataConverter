@@ -1,0 +1,12 @@
+C:\Users\ADMIN\source\repos\CSVDataConverter1\src\CSVDataConverter.Core\bin\Debug\net5.0\CSVDataConverter.Core.deps.json
+C:\Users\ADMIN\source\repos\CSVDataConverter1\src\CSVDataConverter.Core\bin\Debug\net5.0\CSVDataConverter.Core.dll
+C:\Users\ADMIN\source\repos\CSVDataConverter1\src\CSVDataConverter.Core\bin\Debug\net5.0\ref\CSVDataConverter.Core.dll
+C:\Users\ADMIN\source\repos\CSVDataConverter1\src\CSVDataConverter.Core\bin\Debug\net5.0\CSVDataConverter.Core.pdb
+C:\Users\ADMIN\source\repos\CSVDataConverter1\src\CSVDataConverter.Core\obj\Debug\net5.0\CSVDataConverter.Core.csprojAssemblyReference.cache
+C:\Users\ADMIN\source\repos\CSVDataConverter1\src\CSVDataConverter.Core\obj\Debug\net5.0\CSVDataConverter.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ADMIN\source\repos\CSVDataConverter1\src\CSVDataConverter.Core\obj\Debug\net5.0\CSVDataConverter.Core.AssemblyInfoInputs.cache
+C:\Users\ADMIN\source\repos\CSVDataConverter1\src\CSVDataConverter.Core\obj\Debug\net5.0\CSVDataConverter.Core.AssemblyInfo.cs
+C:\Users\ADMIN\source\repos\CSVDataConverter1\src\CSVDataConverter.Core\obj\Debug\net5.0\CSVDataConverter.Core.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\source\repos\CSVDataConverter1\src\CSVDataConverter.Core\obj\Debug\net5.0\CSVDataConverter.Core.dll
+C:\Users\ADMIN\source\repos\CSVDataConverter1\src\CSVDataConverter.Core\obj\Debug\net5.0\ref\CSVDataConverter.Core.dll
+C:\Users\ADMIN\source\repos\CSVDataConverter1\src\CSVDataConverter.Core\obj\Debug\net5.0\CSVDataConverter.Core.pdb
