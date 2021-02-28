@@ -19,10 +19,10 @@ namespace CSVDataConverter.ConsoleApplication
                 .AddSingleton<ICSVDataSourceService, FileCSVDataSourceService>()
                 .BuildServiceProvider();
 
-            var csvData = serviceProvider.GetService<ICSVDataSourceService>().GetCSVDataAsStringArray();
+            var data = serviceProvider.GetService<ICSVDataSourceService>().GetCSVDataAsStringArray();
 
-            string[] properties = csvData.Take(1).Single().Split(",");
-            var dataLines = csvData.Skip(1);
+            string[] propertyNames = data.Take(1).Single().Split(",");
+            var dataLines = data.Skip(1);
             var list = new List<ExpandoObject>();
             foreach (var dataline in dataLines)
             {
@@ -30,7 +30,7 @@ namespace CSVDataConverter.ConsoleApplication
                 dynamic interimObject = new ExpandoObject();
                 for (int i = 0; i < bits.Length; i++)
                 {
-                    ((IDictionary<string, object>)interimObject)[properties[i]] = bits[i];
+                    ((IDictionary<string, object>)interimObject)[propertyNames[i]] = bits[i];
                 }
                 list.Add(interimObject);
             }
