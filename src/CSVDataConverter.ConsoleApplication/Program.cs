@@ -30,7 +30,26 @@ namespace CSVDataConverter.ConsoleApplication
                 dynamic interimObject = new ExpandoObject();
                 for (int i = 0; i < bits.Length; i++)
                 {
-                    ((IDictionary<string, object>)interimObject)[propertyNames[i]] = bits[i];
+                    if (propertyNames[i].Contains('_'))
+                    {
+                        var propertyNameParts = propertyNames[i].Split("_");
+                        IDictionary<string, object> value;
+
+                        if (!((IDictionary<string, object>)interimObject).ContainsKey(propertyNameParts[0]))
+                        {
+                            value = new Dictionary<string, object>();
+                            value.Add(propertyNameParts[1], bits[i]);
+                            ((IDictionary<string, object>)interimObject)[propertyNameParts[0]] = value;
+                        }
+                        else
+                        {
+                            ((Dictionary<string, object>)((IDictionary<string, object>)interimObject)[propertyNameParts[0]]).Add(propertyNameParts[1], bits[i]);
+                        }
+                    }
+                    else
+                    {
+                        ((IDictionary<string, object>)interimObject)[propertyNames[i]] = bits[i];
+                    }
                 }
                 list.Add(interimObject);
             }
