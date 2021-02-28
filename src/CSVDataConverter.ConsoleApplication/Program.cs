@@ -11,7 +11,8 @@ namespace CSVDataConverter.ConsoleApplication
     class Program
     {
         static void Main(string[] args)
-        {   Console.WriteLine("Please enter file path:");
+        {   
+            Console.WriteLine("Please enter file path:");
             var filepath = Console.ReadLine();
             string[] properties = File.ReadAllLines(filepath).Take(1).Single().Split(",");
             var dataLines = File.ReadAllLines(filepath).Skip(1);
