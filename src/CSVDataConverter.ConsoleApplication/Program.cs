@@ -19,14 +19,16 @@ namespace CSVDataConverter.ConsoleApplication
         {
             ServiceProvider serviceProvider = ConfigureServices();
 
+            var inputConverter = serviceProvider.GetService<IInputFormatSelectionService>().GetSelectedInputFormat();
+            if (inputConverter is null) return;
+
             var data = serviceProvider.GetService<ICSVDataSourceService>().GetCSVDataAsStringArray();
             if (data is null) return;
 
-            var inputConverter = serviceProvider.GetService<IInputFormatSelectionService>().GetSelectedInputFormat();
-            var expandoList = inputConverter.ConvertToExpando(data);
+            var expandoObjectsCollection = inputConverter.ConvertToExpando(data);
 
             var outputConverter = serviceProvider.GetService<IOutputFormatSelectionService>().GetSelectedOutputFormat();
-            var output = outputConverter.ConvertFromExpando(expandoList);
+            var output = outputConverter.ConvertFromExpando(expandoObjectsCollection);
             Console.WriteLine(output);
         }
 
