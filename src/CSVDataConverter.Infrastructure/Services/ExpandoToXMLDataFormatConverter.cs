@@ -9,7 +9,7 @@ using System.Xml.Linq;
 
 namespace CSVDataConverter.Infrastructure.Services
 {
-    public class ExpandoToXMLDataFormatConverter : IDataFormatConverter
+    public class ExpandoToXmlDataFormatConverter : IDataFormatConverter
     {
         public string ConvertFromExpando(List<ExpandoObject> input)
         {
@@ -39,7 +39,7 @@ namespace CSVDataConverter.Infrastructure.Services
             return finalXmlString.ToString();
         }
 
-        public string ConvertToExpando(string input)
+        public List<ExpandoObject> ConvertToExpando(string[] input)
         {
             throw new NotImplementedException();
         }

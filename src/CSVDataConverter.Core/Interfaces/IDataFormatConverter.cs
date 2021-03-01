@@ -10,6 +10,6 @@ namespace CSVDataConverter.Core.Interfaces
     public interface IDataFormatConverter
     {
         string ConvertFromExpando(List<ExpandoObject> input);
-        string ConvertToExpando(string input);
+        List<ExpandoObject> ConvertToExpando(string[] input);
     }
 }
