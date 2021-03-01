@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CSVDataConverter.Infrastructure.Services
 {
-    public class ExpandoToJsonDataFormatConverter : IDataFormatConverter
+    public class Expando_JsonDataFormatConverter : IDataFormatConverter
     {
         public string ConvertFromExpando(List<ExpandoObject> input)
         {

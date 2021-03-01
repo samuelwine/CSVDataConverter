@@ -22,15 +22,16 @@ namespace CSVDataConverter.ConsoleApplication
                 .BuildServiceProvider();
 
             var data = serviceProvider.GetService<ICSVDataSourceService>().GetCSVDataAsStringArray();
+            if (data is null) return;
 
-            ExpandoToCsvDataFormatConverter csvConverter = new ExpandoToCsvDataFormatConverter();
+            Expando_CsvDataFormatConverter csvConverter = new Expando_CsvDataFormatConverter();
             var expandoList = csvConverter.ConvertToExpando(data);
 
-            ExpandoToXmlDataFormatConverter xmlConverter = new ExpandoToXmlDataFormatConverter();
+            Expando_XmlDataFormatConverter xmlConverter = new Expando_XmlDataFormatConverter();
             var xmlOutput = xmlConverter.ConvertFromExpando(expandoList);
             Console.WriteLine(xmlOutput);
 
-            ExpandoToJsonDataFormatConverter jsonConverter = new ExpandoToJsonDataFormatConverter();
+            Expando_JsonDataFormatConverter jsonConverter = new Expando_JsonDataFormatConverter();
             var jsonOutput = jsonConverter.ConvertFromExpando(expandoList);
             Console.WriteLine(jsonOutput);
         }

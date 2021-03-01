@@ -15,7 +15,17 @@ namespace CSVDataConverter.Infrastructure.Services
         {
             Console.WriteLine("Please enter file path:");
             var filepath = Console.ReadLine();
-            var data = File.ReadAllLines(filepath);
+            string[] data = null;
+
+            try
+            {
+                data = File.ReadAllLines(filepath);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"The system has been unable to process the file. System Error Message: {e.Message}");
+            }
+
             return data;
         }
     }

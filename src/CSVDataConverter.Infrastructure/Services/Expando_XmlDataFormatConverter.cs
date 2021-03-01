@@ -9,30 +9,31 @@ using System.Xml.Linq;
 
 namespace CSVDataConverter.Infrastructure.Services
 {
-    public class ExpandoToXmlDataFormatConverter : IDataFormatConverter
+    public class Expando_XmlDataFormatConverter : IDataFormatConverter
     {
         public string ConvertFromExpando(List<ExpandoObject> input)
         {
             XElement finalXmlString = new XElement("Root");
-            XElement xmlString;
+            XElement interimXmlString;
 
-            foreach (var expando in input)
+            foreach (var dataEntryObject in input)
             {
-                foreach (var item in expando as IDictionary<string, object>)
+                foreach (var dataEntry in dataEntryObject as IDictionary<string, object>)
                 {
-                    if (item.Value.GetType() == typeof(Dictionary<string, object>))
+                    if (dataEntry.Value.GetType() == typeof(Dictionary<string, object>))
                     {
-                        xmlString = new XElement(item.Key);
-                        foreach (var keyee in item.Value as Dictionary<string, object>)
+                        interimXmlString = new XElement(dataEntry.Key);
+                        foreach (var subDataEntry in dataEntry.Value as Dictionary<string, object>)
                         {
-                            xmlString.Add(new XElement(keyee.Key, keyee.Value));
+                            interimXmlString.Add(new XElement(subDataEntry.Key, subDataEntry.Value));
                         }
                     }
                     else
                     {
-                        xmlString = new XElement(item.Key, item.Value);
+                        interimXmlString = new XElement(dataEntry.Key, dataEntry.Value);
                     }
-                    finalXmlString.Add(xmlString);
+
+                    finalXmlString.Add(interimXmlString);
                 }
             }
 
