@@ -31,19 +31,7 @@ namespace CSVDataConverter.Infrastructure.Services
                 {
                     if (headings[i].Contains('_'))
                     {
-                        var propertyNameParts = headings[i].Split("_");
-                        IDictionary<string, object> value;
-
-                        if (!((IDictionary<string, object>)dataEntryObject).ContainsKey(propertyNameParts[0]))
-                        {
-                            value = new Dictionary<string, object>();
-                            value.Add(propertyNameParts[1], dataEntryParts[i]);
-                            ((IDictionary<string, object>)dataEntryObject)[propertyNameParts[0]] = value;
-                        }
-                        else
-                        {
-                            ((Dictionary<string, object>)((IDictionary<string, object>)dataEntryObject)[propertyNameParts[0]]).Add(propertyNameParts[1], dataEntryParts[i]);
-                        }
+                        ProcessGroupHeadings(headings, dataEntryObject, dataEntryParts, i);
                     }
                     else
                     {
@@ -55,6 +43,23 @@ namespace CSVDataConverter.Infrastructure.Services
             }
 
             return expandoList;
+        }
+
+        private static void ProcessGroupHeadings(string[] headings, dynamic dataEntryObject, string[] dataEntryParts, int i)
+        {
+            var propertyNameParts = headings[i].Split("_");
+            IDictionary<string, object> value;
+
+            if (!((IDictionary<string, object>)dataEntryObject).ContainsKey(propertyNameParts[0]))
+            {
+                value = new Dictionary<string, object>();
+                value.Add(propertyNameParts[1], dataEntryParts[i]);
+                ((IDictionary<string, object>)dataEntryObject)[propertyNameParts[0]] = value;
+            }
+            else
+            {
+                ((Dictionary<string, object>)((IDictionary<string, object>)dataEntryObject)[propertyNameParts[0]]).Add(propertyNameParts[1], dataEntryParts[i]);
+            }
         }
     }
 }
