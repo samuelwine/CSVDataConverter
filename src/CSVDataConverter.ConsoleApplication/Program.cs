@@ -56,35 +56,13 @@ namespace CSVDataConverter.ConsoleApplication
                 list.Add(interimObject);
             }
 
-            //JSON serialization
-            var jsonOutput = JsonSerializer.Serialize(list);
+            ExpandoToXMLDataFormatConverter xmlConverter = new ExpandoToXMLDataFormatConverter();
+            var xmlOutput = xmlConverter.ConvertFromExpando(list);
+            Console.WriteLine(xmlOutput);
+
+            ExpandoToJsonDataFormatConverter jsonConverter = new ExpandoToJsonDataFormatConverter();
+            var jsonOutput = jsonConverter.ConvertFromExpando(list);
             Console.WriteLine(jsonOutput);
-
-
-            //XML serialization
-            XElement finalXmlString = new XElement("Root");
-            XElement xmlString;
-            
-            foreach (var expando in list)
-            {
-                foreach (var item in expando as IDictionary<string, object>)
-                {
-                    if (item.Value.GetType() == typeof(Dictionary<string, object>))
-                    {
-                        xmlString = new XElement(item.Key);
-                        foreach (var keyee in item.Value as Dictionary<string, object>)
-                        {
-                            xmlString.Add(new XElement(keyee.Key, keyee.Value));
-                        }
-                    }
-                    else
-                    {
-                        xmlString = new XElement(item.Key, item.Value);
-                    }
-                    finalXmlString.Add(xmlString);
-                }
-            }
-            Console.WriteLine(finalXmlString);
         }
     }
 }
