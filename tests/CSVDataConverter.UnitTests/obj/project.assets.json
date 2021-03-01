@@ -1648,6 +1648,29 @@
         "build": {
           "build/netcoreapp2.1/xunit.runner.visualstudio.props": {}
         }
+      },
+      "CSVDataConverter.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/CSVDataConverter.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CSVDataConverter.Core.dll": {}
+        }
+      },
+      "CSVDataConverter.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "CSVDataConverter.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CSVDataConverter.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CSVDataConverter.Infrastructure.dll": {}
+        }
       }
     }
   },
@@ -5611,10 +5634,21 @@
         "xunit.runner.visualstudio.2.4.3.nupkg.sha512",
         "xunit.runner.visualstudio.nuspec"
       ]
+    },
+    "CSVDataConverter.Core/1.0.0": {
+      "type": "project",
+      "path": "../../src/CSVDataConverter.Core/CSVDataConverter.Core.csproj",
+      "msbuildProject": "../../src/CSVDataConverter.Core/CSVDataConverter.Core.csproj"
+    },
+    "CSVDataConverter.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../../src/CSVDataConverter.Infrastructure/CSVDataConverter.Infrastructure.csproj",
+      "msbuildProject": "../../src/CSVDataConverter.Infrastructure/CSVDataConverter.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "CSVDataConverter.Infrastructure >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 16.7.1",
       "coverlet.collector >= 1.3.0",
       "xunit >= 2.4.1",
@@ -5652,7 +5686,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\ADMIN\\source\\repos\\CSVDataConverter1\\src\\CSVDataConverter.Infrastructure\\CSVDataConverter.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\ADMIN\\source\\repos\\CSVDataConverter1\\src\\CSVDataConverter.Infrastructure\\CSVDataConverter.Infrastructure.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
