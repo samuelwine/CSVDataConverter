@@ -2,14 +2,6 @@
 using CSVDataConverter.Infrastructure.Services;
 using Microsoft.Extensions.DependencyInjection;
 using System;
-using System.Collections.Generic;
-using System.Dynamic;
-using System.IO;
-using System.Linq;
-using System.Runtime.Serialization;
-using System.Text;
-using System.Text.Json;
-using System.Xml.Linq;
 
 namespace CSVDataConverter.ConsoleApplication
 {
