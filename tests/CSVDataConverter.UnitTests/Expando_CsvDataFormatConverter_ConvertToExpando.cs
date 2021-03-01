@@ -8,11 +8,12 @@ namespace CSVDataConverter.UnitTests
 {
     public class Expando_CsvDataFormatConverter_ConvertToExpando
     {
-        [Fact]
-        public void GroupsHeadingsByUnderscore()
+        [Theory]
+        [MemberData(nameof(Data))]
+        public void GroupsHeadings(string input, int expected)
         {
             //Arrange
-            var demoStringData = "Name,Surname,Address_Line1,Address_Line2" + Environment.NewLine + "Dave,Jenkins,1 Hall Road,Bradford";
+            var demoStringData = input;
             var dataFormatConverter = new Expando_CsvDataFormatConverter();
 
             //Act
@@ -20,22 +21,13 @@ namespace CSVDataConverter.UnitTests
 
             //Assert
             int count = ((IDictionary<string, object>)expandoDataObject.First()).Count;
-            Assert.Equal(3, count);
+            Assert.Equal(expected, count);
         }
 
-        [Fact]
-        public void CreatesMultipleGroups()
+        public static IEnumerable<object[]> Data = new List<object[]>
         {
-            //Arrange
-            var demoStringData = "Name_FirstName,Name_Surname,Address_Line1,Address_Line2" + Environment.NewLine + "Dave,Jenkins,1 Hall Road,Bradford";
-            var dataFormatConverter = new Expando_CsvDataFormatConverter();
-
-            //Act
-            var expandoDataObject = dataFormatConverter.ConvertToExpando(demoStringData);
-
-            //Assert
-            int count = ((IDictionary<string, object>)expandoDataObject.First()).Count;
-            Assert.Equal(2, count);
-        }
+            new object[] { "Name,Surname,Address_Line1,Address_Line2" + Environment.NewLine + "Dave,Jenkins,1 Hall Road,Bradford", 3 },
+            new object[] { "Name_FirstName,Name_Surname,Address_Line1,Address_Line2" + Environment.NewLine + "Dave,Jenkins,1 Hall Road,Bradford", 2 },
+        };
     }
 }
