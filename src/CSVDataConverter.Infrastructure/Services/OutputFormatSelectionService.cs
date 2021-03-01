@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CSVDataConverter.Infrastructure.Services
 {
-    public class UserOutputFormatSelectionService : IOutputFormatSelectionService
+    public class OutputFormatSelectionService : IOutputFormatSelectionService
     {
         public IDataFormatConverter GetSelectedOutputFormat()
         {
