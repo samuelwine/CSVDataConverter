@@ -19,6 +19,7 @@ namespace CSVDataConverter.ConsoleApplication
         {
             var serviceProvider = new ServiceCollection()
                 .AddSingleton<ICSVDataSourceService, FileCSVDataSourceService>()
+                .AddSingleton<IOutputFormatSelectionService, UserOutputFormatSelectionService>()
                 .BuildServiceProvider();
 
             var data = serviceProvider.GetService<ICSVDataSourceService>().GetCSVDataAsStringArray();
@@ -27,13 +28,9 @@ namespace CSVDataConverter.ConsoleApplication
             Expando_CsvDataFormatConverter csvConverter = new Expando_CsvDataFormatConverter();
             var expandoList = csvConverter.ConvertToExpando(data);
 
-            Expando_XmlDataFormatConverter xmlConverter = new Expando_XmlDataFormatConverter();
-            var xmlOutput = xmlConverter.ConvertFromExpando(expandoList);
-            Console.WriteLine(xmlOutput);
-
-            Expando_JsonDataFormatConverter jsonConverter = new Expando_JsonDataFormatConverter();
-            var jsonOutput = jsonConverter.ConvertFromExpando(expandoList);
-            Console.WriteLine(jsonOutput);
+            var dataConverter = serviceProvider.GetService<IOutputFormatSelectionService>().GetSelectedOutputFormat();
+            var output = dataConverter.ConvertFromExpando(expandoList);
+            Console.WriteLine(output);
         }
     }
 }
