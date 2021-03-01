@@ -9,17 +9,17 @@ using CSVDataConverter.Core.Interfaces;
 
 namespace CSVDataConverter.Infrastructure.Services
 {
-    public class FileCSVDataSourceService : ICSVDataSourceService
+    public class FileDataSourceService : IDataSourceService
     {
-        public string[] GetCSVDataAsStringArray()
+        public string GetDataAsString()
         {
             Console.WriteLine("Please enter file path:");
             var filepath = Console.ReadLine();
-            string[] data = null;
+            string data = null;
 
             try
             {
-                data = File.ReadAllLines(filepath);
+                data = File.ReadAllText(filepath);
             }
             catch (Exception e)
             {

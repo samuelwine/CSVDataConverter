@@ -24,11 +24,8 @@ namespace CSVDataConverter.Infrastructure.Services
 
                 default:
                     Console.WriteLine("Invalid Selection");
-                    GetSelectedOutputFormat();
-                    break;
+                    return null;
             }
-
-            return null;
         }
     }
 }

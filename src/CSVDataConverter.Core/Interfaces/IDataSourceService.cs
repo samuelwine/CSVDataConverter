@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace CSVDataConverter.Core.Interfaces
 {
-    public interface ICSVDataSourceService
+    public interface IDataSourceService
     {
-        string[] GetCSVDataAsStringArray();
+        string GetDataAsString();
     }
 }

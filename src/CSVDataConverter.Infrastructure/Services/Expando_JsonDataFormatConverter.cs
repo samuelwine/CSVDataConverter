@@ -16,7 +16,7 @@ namespace CSVDataConverter.Infrastructure.Services
             return JsonSerializer.Serialize(input);
         }
 
-        public List<ExpandoObject> ConvertToExpando(string[] input)
+        public List<ExpandoObject> ConvertToExpando(string input)
         {
             throw new NotImplementedException();
         }

@@ -15,13 +15,14 @@ namespace CSVDataConverter.Infrastructure.Services
             throw new NotImplementedException();
         }
 
-        public List<ExpandoObject> ConvertToExpando(string[] input)
+        public List<ExpandoObject> ConvertToExpando(string input)
         {
-            var expandoList = new List<ExpandoObject>(); 
+            var expandoList = new List<ExpandoObject>();
 
-            string[] headings = input.Take(1).Single().Split(",");
+            string[] inputStringArray = input.Split(Environment.NewLine);
+            string[] headings = inputStringArray.Take(1).Single().Split(",");
 
-            var data = input.Skip(1);
+            var data = inputStringArray.Skip(1);
             foreach (var dataEntry in data) 
             {
                 dynamic dataEntryObject = new ExpandoObject();

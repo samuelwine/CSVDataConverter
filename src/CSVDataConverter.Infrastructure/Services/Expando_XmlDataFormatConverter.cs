@@ -40,7 +40,7 @@ namespace CSVDataConverter.Infrastructure.Services
             return finalXmlString.ToString();
         }
 
-        public List<ExpandoObject> ConvertToExpando(string[] input)
+        public List<ExpandoObject> ConvertToExpando(string input)
         {
             throw new NotImplementedException();
         }
